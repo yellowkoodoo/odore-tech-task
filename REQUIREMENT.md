@@ -1,7 +1,7 @@
 # QA Engineer — Test Task
 
 Role: Middle/Senior QA Engineer
-Estimated effort: 4–6 hours (spread over up to 5 calendar days)
+Estimated effort: **4–6 hours** (spread over up to 5 calendar days)
 Deliverable: public/private Git repo link (GitHub, GitLab, or Bitbucket)
 
 # Ground rules
@@ -20,18 +20,20 @@ If you find this app unsuitable for any scenario, briefly justify and pick an al
 
 ## 1.1 Test design
 
-Pick one end-to-end flow (login → cart → checkout → order confirmation). Produce a test case suite covering it.
+Pick **one end-to-end flow** (login → cart → checkout → order confirmation). Produce a test case suite covering it.
+
 Requirements:
 
-Minimum 15 test cases.
-Mix of positive, negative, boundary, and cross-field validation cases.
-Each case: ID, title, preconditions, steps, expected result, priority (P1–P3).
-Format: Markdown table, Excel, or Google Sheet (link inside the repo).
+- Minimum **15 test cases**.
+- Mix of positive, negative, boundary, and cross-field validation cases.
+- Each case: ID, title, preconditions, steps, expected result, priority (P1–P3).
+- Format: Markdown table, Excel, or Google Sheet (link inside the repo).
+
 We evaluate: coverage breadth, ability to prioritize, clarity of steps, ability to spot non-obvious cases.
 
 ## 1.2 Exploratory session + bug report
 
-Run a 60-minute exploratory session across the whole app. Log every defect you find in a BUGS.md file.
+Run a **60-minute exploratory** session across the whole app. Log every defect you find in a **BUGS.md** file.
 
 Each bug entry must include:
 
@@ -45,17 +47,17 @@ Each bug entry must include:
 
 # Part 2 — Automation (≈ 2.5–4 h)
 
-Build a Playwright + TypeScript project from scratch. Do not fork an existing template.
+Build a **Playwright + TypeScript project** from scratch. Do not fork an existing template.
 
 ## 2.1 Scope
 
-Automate 5–7 test scenarios covering the login/cart/checkout flow. Include at least:
+Automate **5–7 test scenarios** covering the login/cart/checkout flow. Include at least:
 
-1 happy-path E2E scenario
-1 negative auth scenario
-1 data-driven scenario (parameterized inputs)
-1 scenario asserting UI state after browser reload / storage manipulation
-1 scenario that intentionally fails on a real bug found in Part 1.2 (comment which one)
+- 1 happy-path E2E scenario
+- 1 negative auth scenario
+- 1 data-driven scenario (parameterized inputs)
+- 1 scenario asserting UI state after browser reload / storage manipulation
+- 1 scenario that intentionally fails on a real bug found in Part 1.2 (comment which one)
 
 ## 2.2 Technical requirements
 
