@@ -2,4 +2,6 @@
 /.vscode/
 /playwright-report/
 /test-results/
+artifacts/
 .Dockerfile
+
