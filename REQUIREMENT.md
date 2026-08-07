@@ -1,8 +1,10 @@
 # QA Engineer — Test Task
 
-Role: Middle/Senior QA Engineer
-Estimated effort: **4–6 hours** (spread over up to 5 calendar days)
-Deliverable: public/private Git repo link (GitHub, GitLab, or Bitbucket)
+**Role:** Middle/Senior QA Engineer
+
+**Estimated effort:** **4–6 hours** (spread over up to 5 calendar days)
+
+**Deliverable:** public/private Git repo link (GitHub, GitLab, or Bitbucket)
 
 # Ground rules
 
