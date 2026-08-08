@@ -28,7 +28,8 @@ Given the limited time frame, I prioritized the most business-critical and most 
 
 **Priority:** P1 (Affects user experience)
 
-**Attachment:** ![Screenshot](./images/BUG_01.png)
+**Attachment:**
+![Screenshot](./images/BUG_01.png)
 
 ## BUG #2
 
@@ -49,7 +50,8 @@ Given the limited time frame, I prioritized the most business-critical and most 
 
 **Priority:** P2 (Affects system performance, system can be polluted with empty orders)
 
-**Attachment:** ![Screenshot](./images/BUG_02.png)
+**Attachment:**
+![Screenshot](./images/BUG_02.png)
 
 ## BUG #3
 
@@ -71,7 +73,8 @@ Given the limited time frame, I prioritized the most business-critical and most 
 
 **Priority:** P1 (Product can be bought for free)
 
-**Attachment:** ![Screenshot](./images/BUG_03.png)
+**Attachment:**
+![Screenshot](./images/BUG_03.png)
 
 ## BUG #4
 
@@ -94,7 +97,8 @@ Given the limited time frame, I prioritized the most business-critical and most 
 
 **Priority:** P1 (Affects user's money, info should be transparent)
 
-**Attachment:** ![Screenshot](./images/BUG_04.png)
+**Attachment:**
+![Screenshot](./images/BUG_04.png)
 
 ## BUG #5
 
@@ -117,7 +121,8 @@ Given the limited time frame, I prioritized the most business-critical and most 
 
 **Priority:** P2 (Affects user's money)
 
-**Attachment:** ![Screenshot](./images/BUG_05.png)
+**Attachment:**
+![Screenshot](./images/BUG_05.png)
 
 ## BUG #6
 
@@ -139,4 +144,5 @@ Given the limited time frame, I prioritized the most business-critical and most 
 
 **Priority:** P1 (Purchase can be submitted for anyone)
 
-**Attachment:** ![Screenshot](./images/BUG_06.png)
+**Attachment:**
+![Screenshot](./images/BUG_06.png)
