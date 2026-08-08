@@ -29,6 +29,7 @@ Given the limited time frame, I prioritized the most business-critical and most 
 **Priority:** P1 (Affects user experience)
 
 **Attachment:**
+
 ![Screenshot](./images/BUG_01.png)
 
 ## BUG #2
