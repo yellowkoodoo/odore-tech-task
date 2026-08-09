@@ -4,7 +4,7 @@ import TopBar from "../../pages/TopBar";
 import InventoryPage from "../../pages/InventoryPage";
 import CartPage from "../../pages/CartPage";
 
-import { standardUser } from "../../resources/users";
+import { standardUser } from "../../resources/Users";
 
 type App = {
     page: Page;

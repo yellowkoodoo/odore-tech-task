@@ -1,14 +1,11 @@
 import BasePage from "./base/BasePage";
 import BurgerMenu from "./components/BurgerMenu";
 
-export enum Items {
-    Menu = "open-menu",
-    Cart = "shopping-cart-link"
-}
+import { TopBarControls } from "../enums/pages";
 
 export default class TopBar extends BasePage {
-    private readonly menuIcon = this.getByTestId(Items.Menu);
-    private readonly cartIcon = this.getByTestId(Items.Cart);
+    private readonly menuIcon = this.getByTestId(TopBarControls.Menu);
+    private readonly cartIcon = this.getByTestId(TopBarControls.Cart);
 
     get menu() {
         return new BurgerMenu(this.page);

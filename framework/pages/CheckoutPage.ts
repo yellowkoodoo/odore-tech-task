@@ -3,16 +3,15 @@ import Step1 from "./components/checkout/CheckoutStep1";
 import Step2 from "./components/checkout/CheckoutStep2";
 import ResultStep from "./components/checkout/SuccessPage";
 
-export enum Buttons {
-    ContinueShopping = "continue-shopping",
-    Checkout = "checkout"
-}
+import { CheckoutButtons } from "../enums/pages";
 
 export default class CheckoutPage extends BasePage {
     private readonly continueShoppingButton = this.getByTestId(
-        Buttons.ContinueShopping
+        CheckoutButtons.ContinueShopping
     );
-    private readonly checkoutButton = this.getByTestId(Buttons.Checkout);
+    private readonly checkoutButton = this.getByTestId(
+        CheckoutButtons.Checkout
+    );
 
     get step1() {
         return new Step1(this.page);

@@ -1,9 +1,11 @@
 import BasePage from "./base/BasePage";
 import InventoryItem from "./components/InventoryItem";
 
+import { InventoryPageControls } from "../enums/pages";
+
 export default class InventoryPage extends BasePage {
     private readonly sortingSelect = this.page.getByTestId(
-        "product-sort-container"
+        InventoryPageControls.SortingSelect
     );
 
     get items() {

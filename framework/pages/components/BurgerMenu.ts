@@ -1,12 +1,6 @@
 import BasePage from "../base/BasePage";
 
-export enum MenuItems {
-    AllItems = "inventory-sidebar-link",
-    About = "about-sidebar-link",
-    Logout = "logout-sidebar-link",
-    ResetAppState = "reset-sidebar-link",
-    Close = "close-menu"
-}
+import { MenuItems } from "../../enums/pages";
 
 export default class BurgerMenu extends BasePage {
     async select(menu: MenuItems) {

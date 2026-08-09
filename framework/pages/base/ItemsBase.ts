@@ -1,9 +1,11 @@
 import BasePage from "./BasePage";
 
+import { InventoryItemFields, CheckoutStep1Buttons } from "../../enums/pages";
+
 export default class ItemsBase extends BasePage {
     async getPrice(item: string) {
         return await this.getItem(item)
-            .getByTestId("inventory-item-price")
+            .getByTestId(InventoryItemFields.Price)
             .textContent();
     }
 
@@ -12,8 +14,8 @@ export default class ItemsBase extends BasePage {
     }
 
     private getItem(item: string) {
-        return this.getByTestId("inventory-item", {
-            inner: "inventory-item-name",
+        return this.getByTestId(InventoryItemFields.ItemRoot, {
+            inner: InventoryItemFields.Name,
             text: item
         });
     }

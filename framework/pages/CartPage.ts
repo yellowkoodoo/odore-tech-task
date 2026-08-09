@@ -1,16 +1,15 @@
 import BasePage from "./base/BasePage";
 import CartItem from "./components/CartItem";
 
-export enum Buttons {
-    ContinueShopping = "continue-shopping",
-    Checkout = "checkout"
-}
+import { CartPageButtons } from "../enums/pages";
 
 export default class CartPage extends BasePage {
     private readonly continueShoppingButton = this.getByTestId(
-        Buttons.ContinueShopping
+        CartPageButtons.ContinueShopping
     );
-    private readonly checkoutButton = this.getByTestId(Buttons.Checkout);
+    private readonly checkoutButton = this.getByTestId(
+        CartPageButtons.Checkout
+    );
 
     get items() {
         return new CartItem(this.page);

@@ -1,11 +1,7 @@
 import BasePage from "./base/BasePage";
 import { User } from "../types/User";
 
-export enum LoginControls {
-    UserNameInput = "username",
-    PasswordInput = "password",
-    LoginButton = "login-button"
-}
+import { LoginControls } from "../enums/pages";
 
 export default class LoginPage extends BasePage {
     private readonly userName = this.getByTestId(LoginControls.UserNameInput);
