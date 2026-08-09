@@ -79,22 +79,11 @@
 <br>3. User is on All Products page
 | 1. Add 1 item to the cart of (Sauce Labs Backpack)
 <br>2. Add 1 item to the cart of (Sauce Labs Fleece Jacket)
-<br>6. Sort items by all available options
+<br>3. Sort items by all available options
 | Products state on Products page remain correct (Added/Not added), Cart items indicator and list in Cart is not changing
 | P3 |
 
 | TC-007
-| Sorting does not affect Cart
-| 1. User account exists
-<br>2. User logged in
-<br>3. User is on All Products page
-| 1. Add 1 item to the cart of (Sauce Labs Backpack)
-<br>2. Add 1 item to the cart of (Sauce Labs Fleece Jacket)
-<br>6. Sort items by all available options
-| Cart items indicator and list is not changing
-| P3 |
-
-| TC-008
 | Add/remove items on Cart page
 | 1. User account exists
 <br>2. User logged in
@@ -117,35 +106,21 @@
 <br>16. Browser: navigate Back
 <br>17. Check that cart contains only added items
 | Check that cart contains only added items
+| P1 |
+
+| TC-008
+| Page refresh does not change Cart
+| 1. User account exists
+<br>2. User logged in
+<br>3. User is on All Products page
+| 1. Add 1 item to the cart of (Sauce Labs Backpack)
+<br>2. Click cart
+<br>3. Browser: Perform Page refresh / F5
+| Check that cart still contains added items
 | P1 |
 
 | TC-009
-| Add/remove items on Cart page
-| 1. User account exists
-<br>2. User logged in
-<br>3. User is on All Products page
-| 1. Add 1 item to the cart of (Sauce Labs Backpack)
-<br>2. Add 1 item to the cart of (Sauce Labs Fleece Jacket)
-<br>3. Add 1 item to the cart of (Sauce Labs Onesie)
-<br>4. Click cart
-<br>5. Remove 1 item from the cart of (Sauce Labs Backpack)
-<br>6. Check that cart items indicator changed to: 2
-<br>7. Check that cart does not show removed item anymore
-<br>8. Click on item (Sauce Labs Fleece Jacket)
-<br>9. On the Product page click Remove
-<br>10. Check that cart items indicator changed to: 1
-<br>11. Browser: navigate Back
-<br>12. Check that cart does not show removed item anymore
-<br>13. Browser: navigate Forward
-<br>14. On the Product page (Sauce Labs Fleece Jacket) click Add to cart
-<br>15. Check that cart items indicator changed to: 2
-<br>16. Browser: navigate Back
-<br>17. Check that cart contains only added items
-| Check that cart contains only added items
-| P1 |
-
-| TC-010
-| Return from Checkout page
+| Return from Checkout page - Cancel
 | 1. User account exists
 <br>2. User logged in
 <br>3. User is on All Products page
@@ -164,7 +139,7 @@
 | only added items listed there
 | P1 |
 
-| TC-011
+| TC-010
 | Return from Checkout page to All Products
 | 1. User account exists
 <br>2. User logged in
@@ -184,8 +159,25 @@
 | only added items listed there
 | P1 |
 
+| TC-011
+| Return from Checkout page to Cart
+| 1. User account exists
+<br>2. User logged in
+<br>3. User is on All Products page
+| 1. Add 1 item to the cart of (Sauce Labs Backpack)
+<br>2. Add 1 item to the cart of (Sauce Labs Fleece Jacket)
+<br>3. Click cart
+<br>4. In the cart: Click Checkout
+<br>5. Checkout: Enter valid Checkout information
+<br>6. Click Continue
+<br>7. Checkout, step 2: Click Cart icon
+<br>8. Remove 1 item to the cart of (Sauce Labs Fleece Jacket)
+<br>9. Proceed to Checkout
+| only added items listed there
+| P1 |
+
 | TC-012
-| Checkout with no added items
+| Checkout with an empty cart
 | 1. User account exists
 <br>2. User logged in
 <br>3. User is on All Products page
