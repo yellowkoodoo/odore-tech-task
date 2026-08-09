@@ -3,7 +3,7 @@
     "compilerOptions": {
         "types": ["node", "@playwright/test"],
         "paths": {
-            "@fixtures/*": ["./framework/utils/fixtures/*"]
+            "@fixtures/*": ["./framework/core/fixtures/*"]
         }
     },
     "include": ["playwright.config.ts", "tests/**/*", "e2e/**/*"]
