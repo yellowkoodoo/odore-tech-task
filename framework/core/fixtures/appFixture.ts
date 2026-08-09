@@ -6,6 +6,8 @@ import CartPage from "../../pages/CartPage";
 
 import { standardUser } from "../../resources/Users";
 
+export { expect } from "@playwright/test";
+
 type App = {
     page: Page;
     login: LoginPage;
@@ -18,8 +20,6 @@ type Fixtures = {
     appNoUser: App;
     appWithUser: App;
 };
-
-export { expect } from "@playwright/test";
 
 const buildApp = (page: Page): App => ({
     page,

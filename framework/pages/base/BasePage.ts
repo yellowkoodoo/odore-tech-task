@@ -1,8 +1,8 @@
 import { Locator, Page } from "@playwright/test";
-import { text } from "node:stream/consumers";
+import URLs from "../../constants/pageUrls";
 
 export default class BasePage {
-    protected URL = "/";
+    protected URL = URLs.BASE;
 
     readonly page: Page;
 
