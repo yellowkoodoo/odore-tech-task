@@ -4,6 +4,10 @@ export enum LoginControls {
     LoginButton = "login-button"
 }
 
+export enum LoginPageElements {
+    Form = "login-container"
+}
+
 export enum TopBarControls {
     Menu = "open-menu",
     Cart = "shopping-cart-link"

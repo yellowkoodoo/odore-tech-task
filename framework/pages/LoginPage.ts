@@ -1,9 +1,11 @@
 import BasePage from "./base/BasePage";
 import { User } from "../types/User";
 
-import { LoginControls } from "../enums/pages";
+import { LoginControls, LoginPageElements } from "../enums/pages";
 
 export default class LoginPage extends BasePage {
+    readonly loginForm = this.getByTestId(LoginPageElements.Form);
+
     private readonly userName = this.getByTestId(LoginControls.UserNameInput);
     private readonly password = this.getByTestId(LoginControls.PasswordInput);
     private readonly loginButton = this.getByTestId(LoginControls.LoginButton);
