@@ -30,7 +30,9 @@ export default defineConfig({
         screenshot: "on",
         launchOptions: { slowMo: 500 },
         headless: process.env.CI ? true : false,
-        viewport: { width: 1200, height: 1080 }
+        viewport: { width: 1200, height: 1080 },
+
+        testIdAttribute: "data-test"
     },
 
     expect: { timeout: 4000 },
