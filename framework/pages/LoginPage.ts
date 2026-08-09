@@ -12,7 +12,7 @@ export default class LoginPage extends BasePage {
     private readonly password = this.getByTestId(LoginControls.PasswordInput);
     private readonly loginButton = this.getByTestId(LoginControls.LoginButton);
 
-    async login(user: User) {
+    async loginAs(user: User) {
         await this.enterUserName(user.UserName);
         await this.enterPassword(user.Password);
         await this.clickLogin();

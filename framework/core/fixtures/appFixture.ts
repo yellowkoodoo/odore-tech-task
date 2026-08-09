@@ -4,6 +4,8 @@ import TopBar from "../../pages/TopBar";
 import InventoryPage from "../../pages/InventoryPage";
 import CartPage from "../../pages/CartPage";
 
+import { standardUser } from "../../resources/users";
+
 type App = {
     page: Page;
     login: LoginPage;
@@ -19,15 +21,23 @@ type Fixtures = {
 
 export { expect } from "@playwright/test";
 
-export const test = base.extend<{ app: App }>({
-    app: async ({ page }, use) => {
-        const app: App = {
-            page,
-            login: new LoginPage(page),
-            topBar: new TopBar(page),
-            inventory: new InventoryPage(page),
-            cart: new CartPage(page)
-        };
+const buildApp = (page: Page): App => ({
+    page,
+    login: new LoginPage(page),
+    topBar: new TopBar(page),
+    inventory: new InventoryPage(page),
+    cart: new CartPage(page)
+});
+
+export const test = base.extend<Fixtures>({
+    appNoUser: async ({ page }, use) => {
+        await use(buildApp(page));
+    },
+
+    appWithUser: async ({ page }, use) => {
+        const app = buildApp(page);
+        await app.login.navigate();
+        await app.login.loginAs(standardUser);
         await use(app);
     }
 });
