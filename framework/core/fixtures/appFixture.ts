@@ -8,12 +8,21 @@ import { standardUser } from "../../resources/Users";
 
 export { expect } from "@playwright/test";
 
-type App = {
-    page: Page;
+type Pages = {
     login: LoginPage;
     topBar: TopBar;
     inventory: InventoryPage;
     cart: CartPage;
+};
+
+type Flows = {
+    // checkout: CheckoutFlow;
+};
+
+type App = {
+    page: Page;
+    PAGES: Pages;
+    FLOWS: Flows;
 };
 
 type Fixtures = {
@@ -23,10 +32,15 @@ type Fixtures = {
 
 const buildApp = (page: Page): App => ({
     page,
-    login: new LoginPage(page),
-    topBar: new TopBar(page),
-    inventory: new InventoryPage(page),
-    cart: new CartPage(page)
+    PAGES: {
+        login: new LoginPage(page),
+        topBar: new TopBar(page),
+        inventory: new InventoryPage(page),
+        cart: new CartPage(page)
+    },
+    FLOWS: {
+        // checkout: new CheckoutFlow(PAGES),
+    }
 });
 
 export const test = base.extend<Fixtures>({
@@ -36,8 +50,8 @@ export const test = base.extend<Fixtures>({
 
     appWithUser: async ({ page }, use) => {
         const app = buildApp(page);
-        await app.login.navigate();
-        await app.login.loginAs(standardUser);
+        await app.PAGES.login.navigate();
+        await app.PAGES.login.loginAs(standardUser);
         await use(app);
     }
 });
