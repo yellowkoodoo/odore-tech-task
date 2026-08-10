@@ -1,10 +1,5 @@
 # README.md:
 
-1. How to install and run (assume a fresh machine).
-2. Project structure — one paragraph.
-3. Design decisions and trade-offs — one paragraph.
-4. Known limitations — bullet list.
-
 ## 1. How to install and run:
 
 IDE
@@ -44,7 +39,7 @@ The project contains the next logical modules:
 
 **Tests** consume the framework through the typed app fixtures, which exposes PAGES and FLOWS namespaces
 
-## 3. Design decisions and trade-offs — one paragraph.
+## 3. Design decisions and trade-offs.
 
 The fixture layer exposes two variants — `appNoUser` for unauthenticated scenarios and `appWithUser` for authenticated ones — where appWithUser performs a one-time UI login, persists the session to json file via a module-level flag, and reloads that state for every subsequent test. This keeps login cost to a single browser round-trip per run.
 
