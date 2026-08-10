@@ -5,7 +5,8 @@ export enum LoginControls {
 }
 
 export enum LoginPageElements {
-    Form = "login-container"
+    Form = "login-container",
+    Error = "error"
 }
 
 export enum TopBarControls {
@@ -50,6 +51,12 @@ export enum CheckoutStep1Inputs {
 export enum CheckoutStep1Buttons {
     Continue = "continue",
     Cancel = "cancel"
+}
+
+export enum CheckoutStep2Labels {
+    Subtotal = "subtotal-label",
+    Tax = "tax-label",
+    Total = "total-label"
 }
 
 export enum CheckoutStep2Buttons {
