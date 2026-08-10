@@ -9,7 +9,7 @@
         "forceConsistentCasingInFileNames": true,
         "types": ["node"],
         "paths": {
-            "@fixtures/*": ["./framework/core/fixtures/*"]
+            "@fixtures/*": ["./framework/core/*"]
         }
     },
     "include": ["tests/**/*"],
