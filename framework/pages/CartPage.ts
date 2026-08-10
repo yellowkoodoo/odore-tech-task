@@ -7,7 +7,7 @@ export default class CartPage extends BasePage {
     private get continueShoppingButton() {
         return this.getByTestId(CartPageButtons.ContinueShopping);
     }
-    private get checkoutButton() {
+    get checkoutButton() {
         return this.getByTestId(CartPageButtons.Checkout);
     }
 

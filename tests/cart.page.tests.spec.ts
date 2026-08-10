@@ -19,4 +19,11 @@ test.describe("Cart tests", () => {
             String(addedItems.length)
         );
     });
+
+    test(`Should forbid checkout with an empty cart - BUG #2`, async ({
+        appWithUser
+    }) => {
+        await appWithUser.PAGES.topBar.openCart();
+        expect(await appWithUser.PAGES.cart.checkoutButton).toBeDisabled();
+    });
 });
