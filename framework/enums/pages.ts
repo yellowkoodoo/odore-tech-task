@@ -26,6 +26,13 @@ export enum InventoryPageControls {
     SortingSelect = "product-sort-container"
 }
 
+export enum SortingOptions {
+    NameAZ = "Name (A to Z)",
+    NameZA = "Name (Z to A)",
+    PriceASC = "Price (low to high)",
+    PriceDESC = "Price (high to low)"
+}
+
 export enum InventoryItemFields {
     ItemRoot = "inventory-item",
     Price = "inventory-item-price",

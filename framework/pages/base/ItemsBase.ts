@@ -9,6 +9,12 @@ export default class ItemsBase extends BasePage {
             .textContent();
     }
 
+    async getAllItems() {
+        return this.getByTestId(InventoryItemFields.ItemRoot)
+            .getByTestId(InventoryItemFields.Name)
+            .allTextContents();
+    }
+
     protected async itemAction(item: string, action: string) {
         await this.getItem(item).getByText(action).click();
     }
