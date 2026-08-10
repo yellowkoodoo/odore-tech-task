@@ -1,10 +1,10 @@
 import { test as base, Page } from "@playwright/test";
-import LoginPage from "../../pages/LoginPage";
-import TopBar from "../../pages/TopBar";
-import InventoryPage from "../../pages/InventoryPage";
-import CartPage from "../../pages/CartPage";
+import LoginPage from "../pages/LoginPage";
+import TopBar from "../pages/TopBar";
+import InventoryPage from "../pages/InventoryPage";
+import CartPage from "../pages/CartPage";
 
-import { standardUser } from "../../resources/Users";
+import { standardUser } from "../resources/Users";
 
 export { expect } from "@playwright/test";
 
@@ -45,7 +45,8 @@ const buildApp = (page: Page): App => ({
 
 export const test = base.extend<Fixtures>({
     appNoUser: async ({ page }, use) => {
-        await use(buildApp(page));
+        const app = buildApp(page);
+        await use(app);
     },
 
     appWithUser: async ({ page }, use) => {

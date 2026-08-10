@@ -1,6 +1,6 @@
 import BasePage from "./BasePage";
 
-import { InventoryItemFields, CheckoutStep1Buttons } from "../../enums/pages";
+import { InventoryItemFields } from "../../enums/pages";
 
 export default class ItemsBase extends BasePage {
     async getPrice(item: string) {

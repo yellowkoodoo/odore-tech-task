@@ -3,14 +3,15 @@ import BasePage from "../../base/BasePage";
 import { CheckoutCompletePageButtons } from "../../../enums/pages";
 
 export default class SuccessPage extends BasePage {
-    readonly titleText = this.getByTestId("title");
-
-    private readonly backHomeButton = this.getByTestId(
-        CheckoutCompletePageButtons.BackHome
-    );
-    private readonly generatePDFButton = this.getByTestId(
-        CheckoutCompletePageButtons.GeneratePDF
-    );
+    get titleText() {
+        return this.getByTestId("title");
+    }
+    private get backHomeButton() {
+        return this.getByTestId(CheckoutCompletePageButtons.BackHome);
+    }
+    private get generatePDFButton() {
+        return this.getByTestId(CheckoutCompletePageButtons.GeneratePDF);
+    }
 
     async backHome() {
         await this.backHomeButton.click();

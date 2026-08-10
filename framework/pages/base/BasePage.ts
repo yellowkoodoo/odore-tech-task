@@ -1,10 +1,15 @@
 import { Locator, Page } from "@playwright/test";
 import URLs from "../../constants/pageUrls";
 
-export default class BasePage {
-    protected URL = URLs.BASE;
+import { LoginPageElements } from "../../enums/pages";
 
-    readonly page: Page;
+export default class BasePage {
+    get error() {
+        return this.getByTestId(LoginPageElements.Error);
+    }
+
+    protected URL = URLs.BASE;
+    protected readonly page: Page;
 
     constructor(page: Page) {
         this.page = page;

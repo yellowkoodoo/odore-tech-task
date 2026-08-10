@@ -6,12 +6,12 @@ import ResultStep from "./components/checkout/SuccessPage";
 import { CheckoutButtons } from "../enums/pages";
 
 export default class CheckoutPage extends BasePage {
-    private readonly continueShoppingButton = this.getByTestId(
-        CheckoutButtons.ContinueShopping
-    );
-    private readonly checkoutButton = this.getByTestId(
-        CheckoutButtons.Checkout
-    );
+    private get continueShoppingButton() {
+        return this.getByTestId(CheckoutButtons.ContinueShopping);
+    }
+    private get checkoutButton() {
+        return this.getByTestId(CheckoutButtons.Checkout);
+    }
 
     get step1() {
         return new Step1(this.page);

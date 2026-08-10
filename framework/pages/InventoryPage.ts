@@ -7,9 +7,9 @@ import URLs from "../constants/pageUrls";
 export default class InventoryPage extends BasePage {
     protected URL = URLs.Inventory;
 
-    private readonly sortingSelect = this.page.getByTestId(
-        InventoryPageControls.SortingSelect
-    );
+    private get sortingSelect() {
+        return this.getByTestId(InventoryPageControls.SortingSelect);
+    }
 
     get items() {
         return new InventoryItem(this.page);

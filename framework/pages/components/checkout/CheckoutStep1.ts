@@ -1,5 +1,5 @@
 import BasePage from "../../base/BasePage";
-import { CheckoutData } from "../../../types/CheckoutData";
+import { UserCheckoutData } from "../../../types/UserCheckoutData";
 
 import {
     CheckoutStep1Inputs,
@@ -7,22 +7,23 @@ import {
 } from "../../../enums/pages";
 
 export default class Step1 extends BasePage {
-    private readonly firstName = this.getByTestId(
-        CheckoutStep1Inputs.FirstName
-    );
-    private readonly lastName = this.getByTestId(CheckoutStep1Inputs.LastName);
-    private readonly postalCode = this.getByTestId(
-        CheckoutStep1Inputs.PostalCode
-    );
+    private get firstName() {
+        return this.getByTestId(CheckoutStep1Inputs.FirstName);
+    }
+    private get lastName() {
+        return this.getByTestId(CheckoutStep1Inputs.LastName);
+    }
+    private get postalCode() {
+        return this.getByTestId(CheckoutStep1Inputs.PostalCode);
+    }
+    private get continueButton() {
+        return this.getByTestId(CheckoutStep1Buttons.Continue);
+    }
+    private get cancelButton() {
+        return this.getByTestId(CheckoutStep1Buttons.Cancel);
+    }
 
-    private readonly continueButton = this.getByTestId(
-        CheckoutStep1Buttons.Continue
-    );
-    private readonly cancelButton = this.getByTestId(
-        CheckoutStep1Buttons.Cancel
-    );
-
-    async fillData(data: CheckoutData) {
+    async fillData(data: UserCheckoutData) {
         await this.enterFirstName(data.FirstName);
         await this.enterLastName(data.LastName);
         await this.enterPostalCode(data.PostalCode);

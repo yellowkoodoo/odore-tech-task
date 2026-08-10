@@ -1,16 +1,23 @@
 import BasePage from "./base/BasePage";
-import { User } from "../types/User";
+import { UserAuthData } from "../types/UserAuthData";
 
 import { LoginControls, LoginPageElements } from "../enums/pages";
 
 export default class LoginPage extends BasePage {
-    readonly loginForm = this.getByTestId(LoginPageElements.Form);
+    get loginForm() {
+        return this.getByTestId(LoginPageElements.Form);
+    }
+    private get userName() {
+        return this.getByTestId(LoginControls.UserNameInput);
+    }
+    private get password() {
+        return this.getByTestId(LoginControls.PasswordInput);
+    }
+    private get loginButton() {
+        return this.getByTestId(LoginControls.LoginButton);
+    }
 
-    private readonly userName = this.getByTestId(LoginControls.UserNameInput);
-    private readonly password = this.getByTestId(LoginControls.PasswordInput);
-    private readonly loginButton = this.getByTestId(LoginControls.LoginButton);
-
-    async loginAs(user: User) {
+    async loginAs(user: UserAuthData) {
         await this.enterUserName(user.UserName);
         await this.enterPassword(user.Password);
         await this.clickLogin();
