@@ -1,12 +1,13 @@
 import { test as base, Page } from "@playwright/test";
+export { expect } from "@playwright/test";
+
 import LoginPage from "../pages/LoginPage";
 import TopBar from "../pages/TopBar";
 import InventoryPage from "../pages/InventoryPage";
 import CartPage from "../pages/CartPage";
 
 import { standardUser } from "../resources/Users";
-
-export { expect } from "@playwright/test";
+import { readStorageState, STORAGE_STATE } from "../utils/browser.storage";
 
 type Pages = {
     login: LoginPage;
@@ -43,6 +44,8 @@ const buildApp = (page: Page): App => ({
     }
 });
 
+let isAuthenticated = false;
+
 export const test = base.extend<Fixtures>({
     appNoUser: async ({ page }, use) => {
         const app = buildApp(page);
@@ -50,9 +53,19 @@ export const test = base.extend<Fixtures>({
     },
 
     appWithUser: async ({ page }, use) => {
+        if (!isAuthenticated) {
+            const app = buildApp(page);
+            await app.PAGES.login.navigate();
+            await app.PAGES.login.loginAs(standardUser);
+            await page.context().storageState({ path: STORAGE_STATE });
+
+            isAuthenticated = true;
+        }
+
+        await page.context().addCookies((await readStorageState()).cookies);
+
         const app = buildApp(page);
-        await app.PAGES.login.navigate();
-        await app.PAGES.login.loginAs(standardUser);
+        await app.PAGES.inventory.navigate();
         await use(app);
     }
 });
