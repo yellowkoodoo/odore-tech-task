@@ -5,8 +5,8 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "pw-test": "npx playwright test",
-        "pw-report": "npx playwright show-report"
+        "test": "npx playwright test",
+        "test:report": "npx playwright show-report"
     },
     "keywords": [],
     "author": "yk",
