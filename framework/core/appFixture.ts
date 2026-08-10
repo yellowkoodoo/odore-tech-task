@@ -7,7 +7,11 @@ import InventoryPage from "../pages/InventoryPage";
 import CartPage from "../pages/CartPage";
 
 import { standardUser } from "../resources/Users";
-import { readStorageState, STORAGE_STATE } from "../utils/browser.storage";
+import {
+    readStorageState,
+    disposeStorageState,
+    STORAGE_STATE
+} from "../utils/browser.storage";
 
 type Pages = {
     login: LoginPage;
@@ -69,3 +73,7 @@ export const test = base.extend<Fixtures>({
         await use(app);
     }
 });
+
+// test.afterAll(async () => {
+//     (disposeStorageState(), (isAuthenticated = false));
+// });
