@@ -1,6 +1,6 @@
-import { User } from "../types/User";
+import { UserAuthData } from "../types/UserAuthData";
 
-export const standardUser: User = {
+export const standardUser: UserAuthData = {
     UserName: "standard_user",
     Password: "secret_sauce"
 };

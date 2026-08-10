@@ -1,4 +1,4 @@
-export interface CheckoutData {
+export interface UserCheckoutData {
     FirstName: string;
     LastName: string;
     PostalCode: string;
