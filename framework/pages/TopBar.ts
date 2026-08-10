@@ -4,6 +4,9 @@ import BurgerMenu from "./components/BurgerMenu";
 import { TopBarControls } from "../enums/pages";
 
 export default class TopBar extends BasePage {
+    get cartItems() {
+        return this.getByTestId(TopBarControls.CartItems);
+    }
     private get menuIcon() {
         return this.getByTestId(TopBarControls.Menu);
     }

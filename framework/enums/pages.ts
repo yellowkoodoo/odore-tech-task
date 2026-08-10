@@ -11,7 +11,8 @@ export enum LoginPageElements {
 
 export enum TopBarControls {
     Menu = "open-menu",
-    Cart = "shopping-cart-link"
+    Cart = "shopping-cart-link",
+    CartItems = "shopping-cart-badge"
 }
 
 export enum MenuItems {
